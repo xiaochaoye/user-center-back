@@ -49,13 +49,13 @@ class UserServiceTest {
         Assertions.assertEquals(-1, result);
 
         //密码不小于8位数
-        userAccount = "xiaochao";
+        userAccount = "xeqeq";
         userPassword = "123456";
         result = userService.userRegister(userAccount, userPassword, checkPassword);
         Assertions.assertEquals(-1, result);
 
         //账户不包含特殊字符
-        userAccount = "ch ao";
+        userAccount = "3132 13";
         userPassword = "12345678";
         result = userService.userRegister(userAccount, userPassword, checkPassword);
         Assertions.assertEquals(-1, result);
@@ -66,13 +66,13 @@ class UserServiceTest {
         Assertions.assertEquals(-1, result);
 
         //账户不能重复
-        userAccount = "xiaoye";
+        userAccount = "xi3123";
         checkPassword = "12345678";
         result = userService.userRegister(userAccount, userPassword, checkPassword);
         Assertions.assertEquals(-1, result);
 
         //断言成功，返回的id大于0，注册是成功的
-        userAccount = "xiaowang11";
+        userAccount = "2312313";
         result = userService.userRegister(userAccount, userPassword, checkPassword);
         Assertions.assertEquals(-1, result);
     }
